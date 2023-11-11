@@ -22,21 +22,21 @@ function App() {
   }
 
   return (
-    <div className='d-flex align-items-center justify-content-center text-center min-vh-100'>
-    <Card style={{ width: '60rem', height: '40rem' }}>
-      <Card.Body className='d-flex flex-column justify-content-between align-items-center'>
-        <Card.Title style={{ fontSize: '2rem', marginBottom: '2rem' }}>Random Quote Generator</Card.Title>
-        <div id="quote-box" className='text-center'>
-          <p id="text" className='mb-3' style={{ fontSize: '3rem', color: '#5cbdea' }}>"{quoteInfo.text}"</p>
-          <p id="author" style={{ fontSize: '2rem' }}> - {quoteInfo.author}</p>
-          <button id="new-quote" onClick={getQuote} className='btn btn-primary mb-3'>New Quote</button>
-          <a href={"https://twitter.com/intent/tweet?hash..." + quoteInfo.text} id="tweet-quote" className='btn btn-info'>Post to Twitter</a>
-        </div>
-      </Card.Body>
-    </Card>
-  </div>
-  
-
+    <div className='d-flex align-items-center justify-content-center text-center min-vh-100' style={{ backgroundColor: '#5cbdea' }}>
+      <Card style={{ width: '60rem', height: 'auto', borderRadius: '15px' }}>
+        <Card.Body className='d-flex flex-column mt-auto justify-content-evenly align-items-center'>
+          <Card.Title style={{ fontSize: '2rem' }}>Random Quote Generator</Card.Title>
+          <div id="quote-box" className='text-center'>
+            <p id="text" className='mb-3' style={{ fontSize: '3rem', color: '#5cbdea' }}>"{quoteInfo.text}"</p>
+            <p id="author" style={{ fontSize: '2rem' }}> - {quoteInfo.author}</p>
+            <div className="row align-items-end justify-content-center">
+              <button id="new-quote" onClick={getQuote} className='col-auto btn btn-primary mx-2'>New Quote</button>
+              <a href={"https://twitter.com/intent/tweet?hash..." + quoteInfo.text} id="tweet-quote" className='col-auto btn btn-info'>Tweet Quote</a>
+            </div>
+          </div>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 
