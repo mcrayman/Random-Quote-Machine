@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
 function App() {
   const [quoteInfo, setQuoteInfo] = useState({})
@@ -37,11 +38,10 @@ function App() {
                 Tweet Quote
               </a>
             </div>
-            <p className='mx-auto' style={{ paddingTop: '10px' }}>By Matthew McMeans</p>
-
           </div>
         </Card.Body>
       </Card>
+      <div id='signature'>Matthew McMeans</div>
     </div>
 
   );
